@@ -1,3 +1,5 @@
+/*Criação das colunas no banco de dados*/
+
 import {
   Column,
   CreateDateColumn,

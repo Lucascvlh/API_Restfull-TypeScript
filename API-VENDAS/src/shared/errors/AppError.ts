@@ -1,3 +1,5 @@
+/*Lançar uma mensagem com erro*/
+
 class AppError {
   public readonly message: string;
   public readonly statusCode: number;

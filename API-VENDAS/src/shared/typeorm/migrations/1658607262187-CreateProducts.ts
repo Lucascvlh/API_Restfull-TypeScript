@@ -1,3 +1,5 @@
+/*Criação das colunas do banco de dados com a migração de informações de TS para SQL*/
+
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class CreateProducts1658607262187 implements MigrationInterface {
@@ -34,7 +36,7 @@ export class CreateProducts1658607262187 implements MigrationInterface {
             default: 'now()',
           },
           {
-            name: 'update_at',
+            name: 'updated_at',
             type: 'timestamp',
             default: 'now()',
           },
