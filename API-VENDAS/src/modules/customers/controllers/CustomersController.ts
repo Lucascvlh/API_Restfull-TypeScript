@@ -6,7 +6,6 @@ import ShowCustomerService from '../services/ShowCustomerService';
 import UpdateCustomerService from '../services/UpdateCustomerService';
 
 export default class CustomersController {
-  /*Mostrar a lista de produtos */
   public async index(request: Request, response: Response): Promise<Response> {
     const listCustomers = new ListCustomerService();
 
@@ -14,7 +13,7 @@ export default class CustomersController {
 
     return response.json(customers);
   }
-  /*Mostrar um único produto através do ID */
+
   public async show(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
 
@@ -24,7 +23,7 @@ export default class CustomersController {
 
     return response.json(customer);
   }
-  /*Criar um novo produto*/
+
   public async create(request: Request, response: Response): Promise<Response> {
     const { name, email } = request.body;
 
@@ -37,10 +36,9 @@ export default class CustomersController {
 
     return response.json(customer);
   }
-  /*Atualizar um produto*/
+
   public async update(request: Request, response: Response): Promise<Response> {
     const { name, email } = request.body;
-
     const { id } = request.params;
 
     const updateCustomer = new UpdateCustomerService();
@@ -53,7 +51,7 @@ export default class CustomersController {
 
     return response.json(customer);
   }
-  /*Deletar um produto*/
+
   public async delete(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
 
