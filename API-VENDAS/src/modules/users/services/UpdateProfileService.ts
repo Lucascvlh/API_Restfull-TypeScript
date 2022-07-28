@@ -47,8 +47,8 @@ class UpdateProfileService {
 
       user.password = await hash(password, 8);
     }
-    user.name = name;
 
+    user.name = name;
     user.email = email;
 
     await usersRepository.save(user);
