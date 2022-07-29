@@ -15,6 +15,7 @@ export class AddCustomersIdToOrders1659041685848 implements MigrationInterface {
         isNullable: true,
       }),
     );
+
     await queryRunner.createForeignKey(
       'orders',
       new TableForeignKey({
